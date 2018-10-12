@@ -1,0 +1,28 @@
+header{
+    background: grey;
+    color: black;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+section{
+    background: silver;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+body{
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.contact-form{
+
+    padding-right: 60%;
+    padding-left: 10%;
+    border-width: 5px;
+    border-right-style:solid;
+}
+
+.age{
+    padding-right: 75%;
+}
+.button{
+    padding-top: 30px;}
