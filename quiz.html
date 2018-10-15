@@ -24,11 +24,12 @@
                    aria-controls="home" aria-selected="true">Strona Główna</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="blog-tab" data-toggle="tab" href="blog.html" role="tab" aria-controls="profile"
-                   >Blog</a>
+                <a class="nav-link" id="blog-tab" data-toggle="tab" href="blog.html" role="tab"
+                   aria-controls="profile">Blog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" id="quiz-tab" data-toggle="tab" href="quiz.html" role="tab" aria-controls="home">Quiz</a>
+                <a class="nav-link active" id="quiz-tab" data-toggle="tab" href="quiz.html" role="tab"
+                   aria-controls="home" aria-selected="true">Quiz</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="kontakt.html" role="tab"
@@ -41,7 +42,10 @@
     <div class="grid">
         <div id="quiz">
             <h1>Quiz</h1>
-            <hr style="margin-bottom: 20px">
+            <div id="progressBar">
+                <div class="bar"></div>
+            </div>
+            <hr style="margin-bottom: 15px">
 
             <p id="question"></p>
 
@@ -52,12 +56,16 @@
                 <button id="btn3"><span id="choice3"></span></button>
             </div>
 
-            <hr style="margin-top: 50px">
+            <hr style="margin-top: 20px">
             <footer>
-                <p id="progress">Question x of y</p>
+                <p id="progress">Pytanie x z y</p>
             </footer>
+
         </div>
     </div>
+    <script src="quiz.js"></script>
+    <script src="question.js"></script>
+    <script src="app.js"></script>
 
     </body>
     <footer include="footer" class="main-footer"></footer>
