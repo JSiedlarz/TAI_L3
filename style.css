@@ -20,22 +20,13 @@ body{
     border-width: 5px;
     border-right-style:solid;
 }
-
-#progressBar {
-  width: 90%;
-  margin: 10px auto;
-  height: 22px;
-  background-color: grey;
-}
-
-#progressBar div {
-  height: 100%;
-  text-align: right;
-  padding: 0 10px;
-  line-height: 22px; /* same as #progressBar height if we want text middle aligned */
-  width: 0;
-  background-color: silver;
-  box-sizing: border-box;
+#step{
+    width: 10%;
+    height: 30px;
+    background-color: grey;
+    text-align: center;
+    line-height: 30px;
+    color: white;
 }
 
 .age{

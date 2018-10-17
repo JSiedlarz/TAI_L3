@@ -17,6 +17,7 @@ function populate() {
         }
 
         showProgress();
+        move();
     }
 };
 
@@ -38,24 +39,29 @@ function showProgress() {
 };
 
 function showScores() {
-    var gameOverHTML = "<h1>Result</h1>";
+    var gameOverHTML = "<h1>Wynik</h1>";
     gameOverHTML += "<h2 id='score'> Twój wynik to: " + quiz.score + "</h2>";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 };
-
+let progressWidth = 0;
+let progressBar = document.querySelector('#step');
+function move() {
+    progressWidth += 10;
+    progressBar.style.width = progressWidth + '%';
+}
 // create questions
 var questions = [
     new Question("Który z nich nie jest językiem programowania obiektowego?", ["Java", "C#","C++", "C"], "C"),
     new Question("Jaki język jest używany do stylizowania stron internetowych?", ["HTML", "JQuery", "CSS", "XML"], "CSS"),
     new Question("Istnieją ____ główne elementy programowania obiektowego.", ["1", "6","2", "4"], "4"),
     new Question("Który język jest używany w aplikacjach internetowych?", ["PHP", "Python", "Javascript", "Każdy"], "Każdy"),
-    new Question("MVC to ____.", ["Language", "Library", "Framework", "Każdy"], "Framework")
-  /*  new Question("Język C to język:", ["Stukturalny", "Obiektowy", "Funkcyjny", "Logiczny"], "Strukturalny")
-    new Question("Char to typ danych:", ["Znakowy", "Całkowity", "Logiczny", "Zmiennoprzecinkowy"], "Znakowy")
-    new Question("Typ danych całkowity to:", ["float", "int", "double", "char"], "int")
-    new Question("Zmienna typu bool może przyjąć wartości:", ["2-1000", "985U 30000U", "3 67 -567", "false true"], "false true")
-    new Question("Identyfikator to inaczej:", ["wskaźnik", "zmienna", "nazwa", "operator"], "nazwa")*/
+    new Question("MVC to ____.", ["Language", "Library", "Framework", "Każdy"], "Framework"),
+    new Question("Język C to język:", ["Stukturalny", "Obiektowy", "Funkcyjny", "Logiczny"], "Strukturalny"),
+    new Question("Char to typ danych:", ["Znakowy", "Całkowity", "Logiczny", "Zmiennoprzecinkowy"], "Znakowy"),
+    new Question("Typ danych całkowity to:", ["float", "int", "double", "char"], "int"),
+    new Question("Zmienna typu bool może przyjąć wartości:", ["2-1000", "985U 30000U", "3 67 -567", "false true"], "false true"),
+    new Question("Identyfikator to inaczej:", ["wskaźnik", "zmienna", "nazwa", "operator"], "nazwa")
 ];
 
 // create quiz
